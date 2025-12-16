@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - JavaScript Learning Project</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        
+        <div id="calculator">
+            <input id="display" readonly>
+            
+            <div id="keys">
+                <!-- First row: Clear and Delete -->
+                <button onclick="clearDisplay()" class="btn-clear">C</button>
+                <button onclick="deleteLast()" class="btn-delete">⌫</button>
+                <button class="btn-empty"></button>
+                <button onclick="appendOperator('/')" class="btn-operator">÷</button>
+                
+                <!-- Number rows -->
+                <button onclick="appendToDisplay('7')" class="btn-number">7</button>
+                <button onclick="appendToDisplay('8')" class="btn-number">8</button>
+                <button onclick="appendToDisplay('9')" class="btn-number">9</button>
+                <button onclick="appendOperator('*')" class="btn-operator">×</button>
+                
+                <button onclick="appendToDisplay('4')" class="btn-number">4</button>
+                <button onclick="appendToDisplay('5')" class="btn-number">5</button>
+                <button onclick="appendToDisplay('6')" class="btn-number">6</button>
+                <button onclick="appendOperator('-')" class="btn-operator">-</button>
+                
+                <button onclick="appendToDisplay('1')" class="btn-number">1</button>
+                <button onclick="appendToDisplay('2')" class="btn-number">2</button>
+                <button onclick="appendToDisplay('3')" class="btn-number">3</button>
+                <button onclick="appendOperator('+')" class="btn-operator">+</button>
+                
+                <!-- Bottom row -->
+                <button onclick="appendToDisplay('0')" class="btn-number btn-zero">0</button>
+                <button onclick="appendToDisplay('.')" class="btn-number">.</button>
+                <button onclick="calculateResult()" class="btn-equals">=</button>
+            </div>
+        </div>
+        
+        <div class="info">
+            <p><strong>Keyboard shortcuts:</strong></p>
+            <ul>
+                <li>Numbers: 0-9</li>
+                <li>Operations: +, -, *, /</li>
+                <li>Calculate: Enter or =</li>
+                <li>Clear: Escape or C</li>
+                <li>Delete: Backspace</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>
