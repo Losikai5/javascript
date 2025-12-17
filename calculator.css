@@ -1,0 +1,216 @@
+/* Calculator Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-weight: 600;
+    color: #333;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Number buttons */
+.btn-number {
+    background: linear-gradient(145deg, #f0f0f0, #d1d1d1);
+    color: #333;
+}
+
+.btn-number:hover {
+    background: linear-gradient(145deg, #e0e0e0, #c1c1c1);
+}
+
+/* Operator buttons */
+.btn-operator {
+    background: linear-gradient(145deg, #ff6b6b, #ee5a52);
+    color: white;
+}
+
+.btn-operator:hover {
+    background: linear-gradient(145deg, #ff5252, #de4a42);
+}
+
+/* Equals button */
+.btn-equals {
+    background: linear-gradient(145deg, #4ecdc4, #44a08d);
+    color: white;
+    grid-column: span 2;
+}
+
+.btn-equals:hover {
+    background: linear-gradient(145deg, #3eb8b0, #34907d);
+}
+
+/* Clear button */
+.btn-clear {
+    background: linear-gradient(145deg, #ffa726, #ff9800);
+    color: white;
+}
+
+.btn-clear:hover {
+    background: linear-gradient(145deg, #ff9716, #ff8800);
+}
+
+/* Delete button */
+.btn-delete {
+    background: linear-gradient(145deg, #ef5350, #e53935);
+    color: white;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(145deg, #df4340, #d52925);
+}
+
+/* Empty button (spacer) */
+.btn-empty {
+    background: transparent;
+    cursor: default;
+    box-shadow: none;
+}
+
+.btn-empty:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Zero button spans two columns */
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Info section */
+.info {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.info ul {
+    list-style: none;
+    text-align: left;
+}
+
+.info li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info li:before {
+    content: "⌨️";
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    #calculator {
+        padding: 20px;
+    }
+    
+    #display {
+        height: 60px;
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    
+    button {
+        height: 60px;
+        font-size: 1.2rem;
+    }
+    
+    #keys {
+        gap: 10px;
+    }
+}

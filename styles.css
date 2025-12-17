@@ -1,6 +1,117 @@
 body{
     margin: 0;
-    background-color: rgb(98, 97, 93);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(147, 197, 253, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 20% 70%, rgba(37, 99, 235, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(147, 197, 253, 0.8);
+    color: #e0f2fe;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #bfdbfe;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+#name {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: 2px solid rgba(59, 130, 246, 0.5);
+    border-radius: 25px;
+    background: rgba(30, 58, 138, 0.2);
+    color: white;
+    outline: none;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3),
+                inset 0 0 20px rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+#name:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 30px rgba(96, 165, 250, 0.6),
+                inset 0 0 20px rgba(59, 130, 246, 0.2);
+    transform: scale(1.05);
+}
+
+#name::placeholder {
+    color: rgba(191, 219, 254, 0.6);
+}
+
+#mysubmit {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #3b82f6, #60a5fa);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4),
+                0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#mysubmit:hover {
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.6),
+                0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px) scale(1.05);
+}
+
+#mysubmit:active {
+    transform: translateY(0) scale(0.98);
+}
+
+#H3 {
+    font-size: 1.3em;
+    text-align: center;
+    color: #e0f2fe;
+    text-shadow: 0 0 15px rgba(147, 197, 253, 0.6);
+    margin-top: 20px;
 }
 #clock-container{
     display: flex;
